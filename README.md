@@ -4,7 +4,7 @@ This document provides an overview and tutorial of the Production Reviewer Skill
 
 ## Problem Statement
 
-Many developers and non-developers use rapid prototyping tools (like Lovable) or boilerplate GitHub repos to launch ideas quickly. However, these prototypes sometimes contain:
+Many developers and non-developers use rapid prototyping tools (like Lovable) or boilerplate GitHub repositories to launch ideas quickly. However, these prototypes sometimes contain:
 
 - Security Vulnerabilities: Hardcoded keys or permissive Row Level Security (RLS).
 
