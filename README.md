@@ -36,8 +36,8 @@ The core logic resides in a SKILL.md file. The prompt uses a Senior Security Arc
 
 1. Ensure you have the Gemini CLI installed. You can follow the [official quickstart](https://geminicli.com/docs/get-started/) or simply run:
 ```npm install -g @google/gemini-cli```
-2. Once installed, create a dedicated directory for your skill within the user-level skills folder. A "skill" is defined as a directory containing a SKILL.md file. Create the directory hierarchy for the 'production-reviewer' (pr) skill by running 
-```mkdir -p ~/.gemini/skills/pr/{assets,references,scripts}```
+2. Once installed, create a dedicated directory for your skill within the user-level skills folder. A "skill" is defined as a directory containing a SKILL.md file. Create the directory hierarchy for the 'production-reviewer' (pr) skill by running ```mkdir -p ~/.gemini/skills/pr/SKILL.md``` and optionally creating Assets, References, and Scripts folders for more advanced configuration
+```mkdir -p ~/.gemini/skills/pr/{assets,references,scripts}``` 
 3. Global tools (like GitHub or Supabase) must be registered in your user settings file.
 - ```~/.gemini/settings.json (macOS/Linux)``` or ```%USERPROFILE%\.gemini\settings.json (Windows)```.
 - Add your mcpServers configuration block here to ensure the production-reviewer can access external data.
