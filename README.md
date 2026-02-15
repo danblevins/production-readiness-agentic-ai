@@ -30,7 +30,7 @@ The MCP Stack consists of:
 
 ## Prompt Documentation
 
-The core logic resides in a SKILL.md file. The prompt uses a Senior Security Architect persona to ensure professionalism, tone, and thoroughness.
+The core logic resides in a [SKILL.md file](https://github.com/danblevins/production-readiness-agentic-ai/blob/main/skills/pr/SKILL.md). The prompt uses a Senior Security Architect persona to ensure professionalism, tone, and thoroughness.
 
 ## Tutorial & Building Process
 
