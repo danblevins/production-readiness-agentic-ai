@@ -46,4 +46,14 @@ The core logic resides in a SKILL.md file. The prompt uses a Senior Security Arc
 
 ## Real Usage and Benchmarkings
 
+The output of the test examples are [here](https://github.com/danblevins/production-readiness-agentic-ai/tree/main/skills/pr/output).
+
+In the ```danblevins-lovable.md``` file, it correctly identified this as a Vite/React stack and Snyk called out that ```react-router-dom``` needs to be upgraded. Outside of security, it also mentions the need for improved logging and to verify a backend database.
+
+In the ```is-it-raining-in-seattle.md``` file, it correctly identified the simple HTML, CSS, Javascript stack and called out that the OpenWeatherMap API key management should be updated to something not hard-coded. Outside of security, it also highlights the need for a better UI experience.
+
 ## Findings and Reflection
+
+Integrating the GitHub MCP proved helpful to understand the initial code, allowing the model to analyze repository health and cloning the repository. The Snyk MCP was the primary driver for security, uncovering critical vulnerabilities that standard Github alerts sometimes miss.
+
+By telling the model to prioritize the top 5 high-impact fixes, the output shifted from a data dump into a focused output. Finally, by telling the model to audit its own limitations, it provided more transparent output of what could not be verified, allowing me to deep dive and optimize in further iterations.
