@@ -14,6 +14,12 @@ Many developers and non-developers use rapid prototyping tools (like Lovable) or
 
 Therefore, the goal is to create an automated, multi-tool AI agent that audits these projects and provides an initial "Go/No-Go" consultation. This tool provides a starting point to discuss how your project can go from testing to production in a safe and secure way.
 
+### Before creating this Skill tool
+<img width="674" height="561" alt="Screenshot 2026-02-15 at 12 57 06 PM" src="https://github.com/user-attachments/assets/8dcb165d-bf2a-46f1-9563-81a616314e33" />
+
+### After creating this Skill tool
+<img width="689" height="553" alt="Screenshot 2026-02-15 at 12 56 52 PM" src="https://github.com/user-attachments/assets/1c060465-b661-400a-b6c2-b5906b69c386" />
+
 ## System Design
 
 The Skill uses a few Model Context Protocols (MCPs) to give the Gemini CLI access to local environments and external APIs.
