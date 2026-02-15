@@ -1,1 +1,49 @@
-# production-readiness-agentic-ai
+# Production Readiness Reviewer using Gemini CLI and Agent Skills
+
+This document provides an overview and tutorial of the Production Reviewer Skill developed for the Gemini CLI. It's designed to audit Lovable and GitHub projects for production readiness that includes code reviews, vulnerabilities, and infrastructure review.
+
+## Problem Statement
+
+Many developers and non-developers use rapid prototyping tools (like Lovable) or boilerplate GitHub repos to launch ideas quickly. However, these prototypes sometimes contain:
+
+- Security Vulnerabilities: Hardcoded keys or permissive Row Level Security (RLS).
+
+- Scalability Bottlenecks: Unoptimized database queries or lack of caching.
+
+- Maintenance Debt: Outdated dependencies with known CVEs.
+
+Therefore, the goal is to create an automated, multi-tool AI agent that audits these projects and provides an initial "Go/No-Go" consultation. This tool provides a starting point to discuss how your project can go from testing to production in a safe and secure way.
+
+## System Design
+
+The Skill uses a few Model Context Protocols (MCPs) to give the Gemini CLI access to local environments and external APIs.
+
+The MCP Stack consists of:
+
+- GitHub MCP: Monitors repository health, PR history, and Dependabot alerts.
+
+- Snyk MCP: Executes static analysis (SAST) and dependency vulnerability scans.
+
+- Filesystem MCP: Reads local source code for logic audits (Middleware, Auth).
+
+- Supabase MCP: Platform-aware audit (Migrations, Edge Functions, RLS, Logs).
+
+## Prompt Documentation
+
+The core logic resides in a SKILL.md file. The prompt uses a Senior Security Architect persona to ensure professionalism, tone, and thoroughness.
+
+## Tutorial & Building Process
+
+1. Ensure you have the Gemini CLI installed. You can follow the [official quickstart](https://geminicli.com/docs/get-started/) or simply run:
+```npm install -g @google/gemini-cli```
+2. Once installed, create a dedicated directory for your skill within the user-level skills folder. A "skill" is defined as a directory containing a SKILL.md file. Create the directory hierarchy for the 'production-reviewer' (pr) skill by running 
+```mkdir -p ~/.gemini/skills/pr/{assets,references,scripts}```
+3. Global tools (like GitHub or Supabase) must be registered in your user settings file.
+- ```~/.gemini/settings.json (macOS/Linux)``` or ```%USERPROFILE%\.gemini\settings.json (Windows)```.
+- Add your mcpServers configuration block here to ensure the production-reviewer can access external data.
+
+1. To verify, run ```gemini skills``` list in your terminal. You should see pr (or production-reviewer) listed as an available skill.
+
+## Real Usage and Benchmarkings
+
+## Findings and Reflection
