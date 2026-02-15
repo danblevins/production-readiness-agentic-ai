@@ -1,0 +1,40 @@
+{
+    "security": {
+        "auth": {
+            "selectedType": "oauth-personal"
+        }
+    },
+    "mcpServers": {
+        "github": {
+            "command": "npx",
+            "args": [
+                "-y",
+                "@modelcontextprotocol/server-github"
+            ],
+            "env": {
+                "GITHUB_PERSONAL_ACCESS_TOKEN": "YOUR_SECRET_GITHUB_PERSONAL_ACCESS_TOKEN_HERE"
+            }
+        },
+        "filesystem": {
+            "command": "npx",
+            "args": [
+                "-y",
+                "@modelcontextprotocol/server-filesystem",
+                "/your/absolute/path"
+            ]
+        },
+        "snyk": {
+            "command": "/usr/local/bin/npx",
+            "args": [
+                "-y",
+                "snyk@latest",
+                "mcp",
+                "-t",
+                "stdio"
+            ]
+        },
+        "supabase": {
+            "httpUrl": "https://mcp.supabase.com/mcp"
+        }
+    }
+}
