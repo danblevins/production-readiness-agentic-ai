@@ -32,6 +32,8 @@ The MCP Stack consists of:
 
 The core logic resides in a [SKILL.md file](https://github.com/danblevins/production-readiness-agentic-ai/blob/main/skills/pr/SKILL.md). The prompt uses a Senior Security Architect persona to ensure professionalism, tone, and thoroughness.
 
+Comparing the [current SKILL.md file](https://github.com/danblevins/production-readiness-agentic-ai/blob/main/skills/pr/original-SKILL.md) and the original SKILL.md file, it's clear that providing the model with more focused guidance improved its performance. The original prompt focused on Postgres, however most Lovable apps use Supabase. Still, in a future iteration, it should understand the database and select the Skill accordingly. Using the initial SKILL.md, the model would stall or provide incomplete reports if it couldn't connect. The fail-safe ensures the developer still receives the value of the GitHub, Snyk, and Filesystem audits. Finally, the transparency of knowing what was not checked was important to prevent a false sense of security.
+
 ## Tutorial & Building Process
 
 1. Ensure you have the Gemini CLI installed. You can follow the [official quickstart](https://geminicli.com/docs/get-started/) or simply run:
