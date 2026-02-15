@@ -42,7 +42,7 @@ The core logic resides in a SKILL.md file. The prompt uses a Senior Security Arc
 - ```~/.gemini/settings.json (macOS/Linux)``` or ```%USERPROFILE%\.gemini\settings.json (Windows)```.
 - Add your mcpServers configuration block here to ensure the production-reviewer can access external data.
 
-1. To verify, run ```gemini skills``` list in your terminal. You should see pr (or production-reviewer) listed as an available skill.
+4. To verify, run ```gemini skills``` list in your terminal. You should see pr (or production-reviewer) listed as an available skill.
 
 ## Real Usage and Benchmarkings
 
